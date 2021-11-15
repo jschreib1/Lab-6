@@ -7,10 +7,13 @@ from led8x8 import LED8x8
 data, latch, clock = 23, 24, 25
 myLED = LED8x8(data, latch, clock)
 myShifter = Shifter(data, latch, clock)
+
+
+
 try:
   while True:
-    #myLED.display()
-    myLED.multismiley()
+    myLED.display()
+    #myLED.multismiley()
     time.sleep(0.001)
 except KeyboardInterrupt:
   GPIO.cleanup()

@@ -29,8 +29,8 @@ class LED8x8():
   def multismiley(self):
     for i in range(8):
       smiley[0], smiley[1] = pattern[i], row[i]
-    self.shifter.shiftByte(~(mask & smiley[0]))
-    self.shifter.shiftByte(smiley[1])
-    self.shifter.latch(self.shifter.latchPin)
+      self.shifter.shiftByte(~(mask & smiley[0]))
+      self.shifter.shiftByte(smiley[1])
+      self.shifter.latch(self.shifter.latchPin)
     time.sleep(0.001)
     

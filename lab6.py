@@ -1,3 +1,4 @@
+import multiprocessing
 import RPi.GPIO as GPIO
 from shifter import Shifter
 import time
@@ -8,7 +9,8 @@ myLED = LED8x8(data, latch, clock)
 myShifter = Shifter(data, latch, clock)
 try:
   while True:
-    myLED.display()
+    #myLED.display()
+    myLED.multismiley()
     time.sleep(0.001)
 except KeyboardInterrupt:
   GPIO.cleanup()

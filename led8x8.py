@@ -15,3 +15,4 @@ class LED8x8():
       self.shifter.shiftByte(pattern[i])
       self.shifter.shiftByte(1 << i)
     self.shifter.ping(self.shifter.latchPin)
+    time.sleep(0.001)

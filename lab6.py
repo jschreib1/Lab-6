@@ -7,3 +7,4 @@ data, latch, clock = 23, 24, 25
 myLED = LED8x8(data, latch, clock)
 while True:
   myLED.display()
+  time.sleep(0.001)

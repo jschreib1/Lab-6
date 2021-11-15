@@ -12,8 +12,8 @@ class LED8x8():
     self.shifter = Shifter(data, latch, clock)   
 
   def display(self):
-    for i in range(8):
+    for i in range(1,9):
       self.shifter.shiftByte(pattern[i])
-      self.shifter.shiftByte(row[i])
+      self.shifter.shiftByte(1 << (row[i]-1))
     self.shifter.latch(self.latch)
     time.sleep(0.001)

@@ -18,7 +18,7 @@ class Shifter():
     GPIO.output(pin,0)
   
   def latch(self,ping):
-    self.ping(self.clockPin)
+    self.ping(self.latchPin)
     
   def shiftByte(self, byteVal):  # display a given byte pattern
     for i in range(8):           # 8 bits in register

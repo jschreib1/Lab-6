@@ -31,12 +31,12 @@ try:
     x+=movex
     movey = random.randint(-1,1)
     y+=movey
-    myLED.smiley[0] = myLED.pattern[x]
     if x < 0: x = 0
     if x > 7: x = 7
-    myLED.smiley[1] = myLED.pattern[y]
+    myLED.smiley[0] = myLED.pattern[x]
     if y < 0: y = 0
     if y > 7: y = 7
+    myLED.smiley[1] = myLED.pattern[y]
     myLED.shifter.shiftByte((1 << (myLED.smiley[0]-1)))
     myLED.shifter.shiftByte((1 << (myLED.smiley[1]-1)))
     #myLED.display() commented out for the random walk

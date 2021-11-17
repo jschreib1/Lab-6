@@ -38,7 +38,7 @@ try:
     if y > 7: y = 7
     myLED.smiley[1] = myLED.row[y]
     myLED.shifter.shiftByte(1 << x)
-    myLED.shifter.shiftByte(1 << y)
+    myLED.shifter.shiftByte(~(1 << y))
     myLED.shifter.latch(myLED.shifter.latchPin)
     #myLED.display() commented out for the random walk
     #time.sleep(0.001)

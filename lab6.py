@@ -24,7 +24,9 @@ global row, column
 try:
   while True:
     myLED.smiley[0] = random.randint(1,8)
+    print(myLED.smiley[0])
     myLED.smiley[1] = random.randint(1,8)
+    print(myLED.smiley[1])
     myLED.shifter.shiftByte((1 << (myLED.smiley[0]-1)))
     myLED.shifter.shiftByte((1 << (myLED.smiley[1]-1)))
     #myLED.display() commented out for the random walk

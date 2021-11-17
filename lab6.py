@@ -18,10 +18,10 @@ def move(space):
 global row, column
 row = random.randint(0,7) #initial row for random walk
 myLED.smiley[0] = myLED.pattern[row]
-print(myLED.smiley[0])
+print(row)
 column = random.randint(0,7) #initial column for random walk
 myLED.smiley[1] = myLED.pattern[column]
-print(myLED.smiley[1])
+print(column)
 
 try:
   while True:

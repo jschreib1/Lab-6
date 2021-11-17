@@ -15,6 +15,7 @@ class LED8x8():
     self.mask = 0b11111111
     self.p = multiprocessing.Process(name = 'smiley', target = self.display)
     self.p.daemon = True
+    self.p.start
     self.smiley = multiprocessing.Array('b', 2)
   
 

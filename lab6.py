@@ -39,6 +39,7 @@ try:
     myLED.smiley[1] = myLED.row[y]
     myLED.shifter.shiftByte(1 << (myLED.row[x]))
     myLED.shifter.shiftByte(1 << (myLED.row[y]))
+    myLED.shifter.latch(myLED.shifter.latchPin)
     #myLED.display() commented out for the random walk
     #time.sleep(0.001)
     time.sleep(0.1)

@@ -20,13 +20,23 @@ global row, column
 #myLED.smiley[0] = myLED.pattern[row]
 #column = random.randint(0,7) #initial column for random walk
 #myLED.smiley[1] = myLED.pattern[column]
+x = random.randint(0,7)
+y = random.randint(0,7)
+myLED.smiley[0] = myLED.shifter.pattern[x]
+myLED.smiley[1] = myLED.shifter.pattern[y]
 
 try:
   while True:
-    myLED.smiley[0] = random.randint(1,8)
-    print(myLED.smiley[0])
-    myLED.smiley[1] = random.randint(1,8)
-    print(myLED.smiley[1])
+    movex = random.randint(-1,1)
+    x+=movex
+    movey = random.randint(-1,1)
+    y+=movey
+    myLED.smiley[0] = myLED.shifter.pattern[x]
+    if x < 0: x = 0
+    if x > 7: x = 7
+    myLED.smiley[1] = myLED.shifter.pattern[y]
+    if y < 0: y = 0
+    if y > 7: y = 7
     myLED.shifter.shiftByte((1 << (myLED.smiley[0]-1)))
     myLED.shifter.shiftByte((1 << (myLED.smiley[1]-1)))
     #myLED.display() commented out for the random walk

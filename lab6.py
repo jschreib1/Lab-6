@@ -22,8 +22,8 @@ global row, column
 #myLED.smiley[1] = myLED.pattern[column]
 x = random.randint(0,7)
 y = random.randint(0,7)
-myLED.smiley[0] = myLED.shifter.pattern[x]
-myLED.smiley[1] = myLED.shifter.pattern[y]
+myLED.smiley[0] = myLED.pattern[x]
+myLED.smiley[1] = myLED.pattern[y]
 
 try:
   while True:
@@ -31,10 +31,10 @@ try:
     x+=movex
     movey = random.randint(-1,1)
     y+=movey
-    myLED.smiley[0] = myLED.shifter.pattern[x]
+    myLED.smiley[0] = myLED.pattern[x]
     if x < 0: x = 0
     if x > 7: x = 7
-    myLED.smiley[1] = myLED.shifter.pattern[y]
+    myLED.smiley[1] = myLED.pattern[y]
     if y < 0: y = 0
     if y > 7: y = 7
     myLED.shifter.shiftByte((1 << (myLED.smiley[0]-1)))

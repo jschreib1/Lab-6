@@ -16,13 +16,17 @@ def move(space):
     space += random.randint(-1,1)
 
 global row, column
-row = random.randint(1,8) #initial row for random walk
-column = random.randint(1,8) #initial column for random walk
+row = random.randint(0,7) #initial row for random walk
+myLED.smiley[0] = myLED.pattern[row]
+print(myLED.smiley[0])
+column = random.randint(0,7) #initial column for random walk
+myLED.smiley[1] = myLED.pattern[column]
+print(myLED.smiley[1])
 
 try:
   while True:
-    myLED.smiley[0] = move(row)
-    myLED.smiley[1] = move(column)
+    #myLED.smiley[0] = move(row)
+    #myLED.smiley[1] = move(column)
     #myLED.display() commented out for the random walk
     #time.sleep(0.001)
     time.sleep(0.1)
